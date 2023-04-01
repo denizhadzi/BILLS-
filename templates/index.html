@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<table class="table" id="table">
+    <thead class="tablehead">
+      <tr>
+        <th scope="col" style="width:12.50%">YEAR/MONTH</th>
+        <th scope="col" style="width:12.50%">ELEKTRO</th>
+        <th scope="col" style="width:12.50%">PLIN</th>
+        <th scope="col" style="width:12.50%">RTV</th>
+        <th scope="col" style="width:12.50%">STANINVEST</th>
+        <th scope="col" style="width:12.50%">TELEMACH</th>
+        <th scope="col" style="width:12.50%">SUM</th>
+        <th scope="col" style="width:12.50%">SEND EMAL</th>
+      </tr>
+    </thead>
+    <tbody id="sum">
+        {% for i in table %}
+          <tr>
+            <td>{{ i["DATA"] }}</td>
+            <td>{{ i["ELEKTRO"] }}</td>
+            <td>{{ i["PLIN"] }}</td>
+            <td>{{ i["RTV"] }}</td>
+            <td>{{ i["STANINVEST"] }}</td>
+            <td>{{ i["TELEMACH"] }}</td>
+            <td>{{( i["ELEKTRO"] + i["PLIN"] + i["RTV"] + i["STANINVEST"]+ i["TELEMACH"])|round(1) }}</td>
+            <td>
+              <form action="/" method="post">
+                <input type="hidden" value= {{( i["ELEKTRO"] + i["PLIN"] + i["RTV"] + i["STANINVEST"]+ i["TELEMACH"])|round(1) }} id="sum" name="sum">
+                <input type="hidden" value= {{ i["DATA"] }} }} id="data" name="data">
+                <input class="form-control mx-auto w-auto" type="submit" value="SEND EMAIL">
+             </form>
+            </td>
+          </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

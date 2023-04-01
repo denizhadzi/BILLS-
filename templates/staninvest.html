@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Staninvest
+{% endblock %}
+
+{% block main %}
+<table class="table" id="table">
+    <thead class="tablehead">
+      <tr>
+        <th scope="col" style="width:50%">YEAR/MONTH</th>
+        <th scope="col" style="width:50%">PRICE</th>
+      </tr>
+    </thead>
+    <tbody id="sum">
+        {% for i in table %}
+          <tr>
+            <td>{{ i["DATA"] }}</td>
+            <td>{{ i["STANINVEST"] }}</td>
+          </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  <form action="staninvest" method="post">
+    <button class="btn btn-primary">ADD NEW INVOICES</button>
+ </form>
+{% endblock %}

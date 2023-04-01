@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="static/styles.css"  rel="stylesheet">
+        </script>
+    </head>
+    <body>
+        <section class="showcase">
+            <div class="header">
+                <div class="header-top">
+                    <image src="static/logo-1.svg" id="image1"></image>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        EN
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                         <p class="dropdown-item" href="#">SL</a>
+                         <p class="dropdown-item" href="#">AU</a>
+                         <p class="dropdown-item" href="#">RU</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="header-bot">
+                    <li class="nav-item">
+                        {% if request.path == "/index"%}
+                        <a class="nav-link" aria-current="page" href="/"><u>HOME</u></a>
+                        {% else %}
+                        <a class="nav-link" aria-current="page" href="/">HOME</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        {% if request.path == "/elektro"%}
+                        <a class="nav-link" aria-current="page" href="elektro"><u>ELEKTRO</u></a>
+                        {% else %}
+                        <a class="nav-link" aria-current="page" href="elektro">ELEKTRO</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        {% if request.path == "/plin"%}
+                        <a class="nav-link" aria-current="page" href="plin"><u>PLIN</u></a>
+                        {% else %}
+                        <a class="nav-link" aria-current="page" href="plin">PLIN</a>
+                        {% endif %}
+                    <li class="nav-item">
+                        {% if request.path == "/rtv"%}
+                        <a class="nav-link" aria-current="page" href="rtv"><u>RTV</u></a>
+                        {% else %}
+                        <a class="nav-link" aria-current="page" href="rtv">RTV</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        {% if request.path == "/staninvest"%}
+                        <a class="nav-link" aria-current="page" href="staninvest"><u>STANINVEST</u></a>
+                        {% else %}
+                        <a class="nav-link" aria-current="page" href="staninvest">STANINVEST</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        {% if request.path == "/telemach"%}
+                        <a class="nav-link" aria-current="page" href="telemach"><u>TELEMACH</u></a>
+                        {% else %}
+                        <a class="nav-link" aria-current="page" href="telemach">TELEMACH</a>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        {% if session["user_id"] %}
+                           <a class="nav-link" href="logout">LOG OUT</a>
+                        {% else %}
+                           <a class="nav-link" href="login"><u>LOG IN</u></a>
+                        {% endif %}
+                    </li>
+                </div>
+                    <main class="container-fluid py-5 text-center">
+                        {% block main %}{% endblock %}
+                    </main>
+                </div>
+    </body>
+</html>

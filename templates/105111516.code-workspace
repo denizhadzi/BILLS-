@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdio.h": "c",
+			"cs50.h": "c",
+			"typeinfo": "c",
+			"array": "c",
+			"deque": "c",
+			"string": "c",
+			"vector": "c",
+			"iterator": "c",
+			"string_view": "c",
+			"initializer_list": "c",
+			"unordered_map": "c",
+			"random": "c",
+			"type_traits": "c",
+			"*.tcc": "c",
+			"fstream": "c"
+		},
+		"gitdoc.enabled": true
+	}
+}

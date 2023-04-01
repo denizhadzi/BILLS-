@@ -1,0 +1,299 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.top {
+    border-top: 2pt solid black;
+  }
+
+.mb-3 {
+    display: flex;
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: space-between;
+    padding-bottom: 5%
+    }
+
+ .hidden {
+    color: gray:
+        }
+
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+
+        }
+
+
+        .showcase {
+            position: relative;
+            top: 0;
+            left: 0;
+            min-width: 320px;
+            max-width: 2000px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: whitesmoke;
+
+        }
+
+        .header {
+            width: 100%;
+            min-height: 10%;
+            top: 0;
+            left: 0;
+            justify-content: space-between;
+            align-items:center;
+            z-index: 0;
+            background-color: #f2f2f2 !important;
+        }
+
+        #123 {
+          color: white !important;
+        }
+
+        .header-top {
+            width: 100%;
+            display: flex;
+            padding: 20px 20px;
+            justify-content: space-between;
+            align-items:center;
+            z-index: 1000;
+            background-color: whitesmoke!important;
+        }
+
+        .header-bot {
+            width: 100%;
+            height: auto;
+            display: flex;
+            padding: 1% 1%;
+            justify-content: space-between;
+            align-items:center;
+            z-index: 1000;
+            background-color: white !important;
+        }
+
+        .videocontainer {
+            width:auto;
+            position:relative;
+            width:100%;
+        }
+
+        #play {
+            background-image:url("icon-play.svg");
+            background-repeat:no-repeat;
+            width:40%;
+            height:40%;
+            position:absolute;
+            left:0%;
+            right:0%;
+            top:0%;
+            bottom:0%;
+            margin:auto;
+            background-size:contain;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .projekti-name {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            z-index: 1000;
+            background-color: whitesmoke !important;
+        }
+
+        .projekti-name h1 {
+            font-size: 300%;
+            padding: 5% 20%;
+            line-height: 1.25;
+            color: #000;
+            margin: 40px 0;
+        }
+
+        .intro-text {
+            width: 100%;
+            height: auto;
+            padding: 10% 20%;
+            align-items: center;
+            z-index: 1000;
+            background-color:white !important;
+
+        }
+
+        .textbox {
+            width: 100%;
+            height: auto;
+            background-color: white !important;
+            text-align: left;
+            font-size: 180%;
+            color: #b9b9ba;
+        }
+
+        .footer {
+            width: 100%;
+            padding: 2% 10%;
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+            z-index: 1000;
+            background-color: whitesmoke!important;
+        }
+
+        .footer-logo {
+            width:fit-content;
+            padding: 40p;
+            justify-content:space-between;
+            align-items:center;
+            z-index: 1000;
+            background-color:whitesmoke !important;
+        }
+
+
+        .navbar {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            left: 0;
+            padding: 20px 20px;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 500;
+            background-color: whitesmoke !important;
+        }
+
+        .nav-link {
+            font-size: 170%;
+            color: gray !important;
+        }
+
+        .nav-link-ds {
+            font-size: 170%;
+            color: gainsboro !important;
+        }
+        .nav-item {
+            border:1px gray;
+        }
+
+        .header-bot li {
+            list-style-type:none;
+        }
+
+        .center-info {
+            align-items: flex-end;
+        }
+
+        .center-info li {
+            margin: 10px 0;
+            font-size: 150%;
+
+        }
+
+        .footer-logo li {
+            font-size: 1vw;
+        }
+
+        .center-info #prazno {
+            list-style-type:none !important;
+        }
+
+        .center-info {
+            width: 33%;
+        }
+
+        .nagrade {
+            width: 33%;
+            display: flex;
+        }
+
+        .footer p {
+            width:auto;
+        }
+
+        .dropdown {
+            position: relative !important;
+        }
+
+
+        #image1 {
+            width: 5%;
+            height: auto;
+            position: relative;
+        }
+
+        .form-control {
+            text-align: center;
+        }
+
+
+        .videocontainer .video2{
+            object-fit: contain;
+            width: 100%;
+        }
+
+        #image3{
+            object-fit: contain;
+            width: 60% ;
+            height: auto;
+            position: relative;
+        }
+
+        #image4{
+            object-fit: contain;
+            width: 15%;
+            height: auto;
+            position: relative;
+        }
+
+        #image5{
+            object-fit: contain;
+            width: 15% ;
+            height: auto;
+            position: relative;
+        }
+
+        #image6{
+            object-fit: contain;
+            width: 15%;
+            height: auto;
+            position: relative;
+        }
+
+        .btn-primary{
+            background-color: white !important;
+            border-color: gray!important;
+            color:  gray
+
+        }
+
+        .tablehead{
+            width:50%;
+        }
+
+
+
+
