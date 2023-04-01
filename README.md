@@ -2,9 +2,11 @@
 #### Video Demo: <https://www.youtube.com/watch?v=gduvhIyx5ws>
 #### Description:
 
-Hello, my name is Deniz and I'm from Maribor, Slovenia. I'm a civil engineer and recently I have set a goal for my self to learn programming. I have made this project so it can help me collect and send all the invoices costs for my apartment to my tenants in a couple of clicks.
+My name is Deniz, and I'm a civil engineer from Maribor, Slovenia who set a goal for myself to learn programming.
 
-This project is a locally hosted web application for my personal use where I can automatically collect all of the invoices for my apartment (in Slovenian: ELEKTRO (electricity invoice),  PLIN (gas invoice), RTV(TV invoice), STANINVEST (building supervisor invoice), TELEMACH (internet provider invoice) from my Gmail labels and show them on my webpage.
+To help me collect and send all the invoices costs for my apartment to my tenants with ease, I created a locally hosted web application for personal use.
+
+The web application automatically collects all the invoices for my apartment, including electricity, gas, TV, building supervisor, and internet provider invoices from my Gmail labels and displays them on my webpage.
 
 Technologies used:
 
@@ -20,7 +22,7 @@ Technologies used:
 
 ## How the web application works?
 
-The idea is that I can log in to the webpage (there is no register option because it is only meant for personal use)  where there are 7 different .html pages. One for each of the 5 providers (showing all collected bills from that specific provider), on every provider page there is also the option to automatically collect any new invoices (if there are any). There is also one login/logout page and one home/index page (showing the invoices for all the providers combined sorted by month). For every month on the index page, there is also the option to automatically send all invoice expenses to my tenant's email.
+The web application allows me to log in to the webpage, and there is no register option since it is only meant for personal use. There are seven different HTML pages, one for each of the five providers, displaying all the bills collected from each specific provider. Every provider page includes an option to collect any new invoices automatically, if there are any. There is also one login/logout page and one home/index page, showing the invoices for all the providers combined and sorted by month. For every month on the index page, there is an option to automatically send all invoice expenses to my tenant's email.
 
 During login I need to enter these fields:
 
@@ -33,13 +35,13 @@ During login I need to enter these fields:
 
 In the backend of the application there are 8 .py files:
 
-- app.py (main file that runs the main function and controls the page behavior)
+- **app.py** (main file that runs the main function and controls the page behavior)
 
-- helpers.py ( in  which the apology function and login decorator are defined which are then used in the main file)
+- **helpers.py** ( in  which the apology function and login decorator are defined which are then used in the main file)
 
-- calculatin_bill.py ( in which all the  functions that collect, modify, create, and send email data with help of the google API are defined )
+- **calculatin_bill.py** ( in which all the  functions that collect, modify, create, and send email data with help of the google API are defined )
 
-- elektro.py, plin.py, rtv.py, staninvest.py, telemach.py (these files contain functions that go through every message in the Gmail label for the specific provider and then temporarily open the .xml attachment with the invoice information in it and then search through the data in that attachment for the date and costs of the invoice for that month) with the help of the functions defined in the calculatin_bill.py.  All of the functions return a dictionary (for example {'2022-12': 30.9, '2022-11': 29.0, '2022-10': 18.99, '2022-9': 41.84, '2022-8': 59.27}) with date/month as a key and the costs of the invoice for that date as a value. When all is done, all the messages that are checked are moved to another label.
+- **elektro.py**, **plin.py**, **rtv.py**, **staninvest.py**, **telemach.py**: These files contain functions that go through every message in the Gmail label for the specific provider. The functions temporarily open the .xml attachment with the invoice information and search through the data in that attachment for the date and costs of the invoice for that month. All of the functions return a dictionary, for example: {'2022-12': 30.9, '2022-11': 29.0, '2022-10': 18.99, '2022-9': 41.84, '2022-8': 59.27}, with date/month as a key and the costs of the invoice for that date as a value. When all is done, all the checked messages are moved to another label.
 
 ### Tables
 
